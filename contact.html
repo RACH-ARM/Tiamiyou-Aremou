@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Disick Man</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">Disick Man</div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="Boutique.html">Boutique</a>
+            <a href="about.html">À propos</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <div class="separator"></div>
+
+
+
+    <!-- Formulaire de Contact -->
+    <section class="contact-form">
+        <h1>Contactez-nous</h1>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Nom et Prénom</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Sujet</label>
+            <select id="subject" name="subject">
+                <option value="general">Demande générale</option>
+                <option value="order">Problème de commande</option>
+                <option value="feedback">Feedback</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+    </section>
+
+    <!-- Coordonnées et Réseaux Sociaux -->
+    <section class="contact-info">
+        <h2>Nos coordonnées</h2>
+        <p><strong>Adresse :</strong> 123 Rue de la Mode, Libreville, Gabon</p>
+        <p><strong>Téléphone :</strong> +241 00 00 00 00</p>
+        <p><strong>Email :</strong> <a href="mailto:contact@disickman.com">contact@disickman.com</a></p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Disick Man. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    
     <header id="header">
         <div class="logo">Disick Man</div>
         <nav>
             <a href="index.html">Accueil</a>
-            <a href="articles.html">Articles</a>
+            <a href="Boutique.html">Boutique</a>
             <a href="about.html">À propos</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
     </header>
     
@@ -40,7 +41,7 @@
             </div>
         </div>
 
-        <div class="tshirt-product-details">
+        <div id="produit1" class="tshirt-product-details">
             <h1>T-shirt Gabonais Style</h1>
             <p class="tshirt-price">Prix : 15 000 FCFA</p>
             
@@ -48,7 +49,15 @@
             <p class="tshirt-description">
                 Ce t-shirt en coton bio est inspiré de la culture Gabonaise. Disponible en différentes tailles, il est parfait pour un style décontracté tout en restant élégant.
             </p>
+            <div id="feedback" style="display: none; background: green; color: white; padding: 10px; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+                Article ajouté au panier !
+            </div>
+            
+            <button onclick="ajouterAuPanier('T-shirt Gabonais Style',15000)">Ajouter au panier</button>
         </div>
+
+         <a href="panier.html">Voir mon panier</a>
+
     </section>
 
     <!-- Suggestions de produits similaires -->
@@ -79,6 +88,5 @@
         <p>&copy; 2024 Disick Man. Tous droits réservés.</p>
     </footer>
     <script src="script.js"></script>
-    </body>
 </body>
 </html>
