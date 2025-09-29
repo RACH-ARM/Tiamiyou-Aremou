@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Tiamiyou Arèmou</title>
+  <link rel="stylesheet" href="blog.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Menu Hamburger visible partout -->
+  <div class="hamburger" onclick="toggleSidebar()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+<!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <h2 class="logo">Tiamiyou</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu Principal -->
+  <main class="blog-content">
+    <section class="section-card fade-in-bounce delay-1">
+      <h1>Mon Parcours dans le Développement Web</h1>
+      <h2>Comment tout a commencé</h2>
+      <p>Tout a commencé par curiosité. En explorant les métiers du futur et ceux liés à la tech, j’ai découvert le développement web. Très vite, j’ai ressenti que ce domaine était fait pour moi. Ce qui m’a motivé, c’est cette passion de pouvoir créer à partir de rien, en transformant de simples lignes de code en projets uniques. Le processus de création m’a immédiatement captivé.</p>
+    </section>
+
+    <section class="section-card fade-in-bounce delay-2">
+      <h2>Ma Formation</h2>
+      <p>Mon parcours de formation est un peu atypique. En cherchant un endroit où me former sérieusement, j’ai découvert l’ONG Acte Academy à Libreville. C’est une structure locale qui offre des formations gratuites aux jeunes dans les domaines de la tech. C’est là que j’ai fait mes premiers pas avec le HTML, et très rapidement, j’ai eu la chance de transmettre à mon tour, en enseignant à des jeunes plus âgés ou plus jeunes que moi. <br> L’environnement d’apprentissage était motivant, bien encadré, ce qui m’a permis de progresser sans trop de difficultés.</p>
+    </section>
+
+    <section class="section-card fade-in-bounce delay-3">
+      <h2>Mon Premier Projet</h2>
+      <p>En parallèle, j’étais aussi Community Manager de la marque gabonaise Disick Man. Naturellement, j’ai voulu créer un site pour la marque, ce qui a été mon premier vrai projet. C’est à ce moment que j’ai affronté mes premiers défis : structurer un site, organiser son design, gérer les interactions… <br> J’ai utilisé HTML, CSS et JavaScript pour la base du site, puis j’ai voulu tester mes capacités en backend, avec du PHP et PHPMailer pour gérer un formulaire de contact. Ce projet m’a beaucoup appris. Même s’il n’est pas encore totalement terminé, j’en suis particulièrement fier.</p>
+    </section>
+
+    <section class="section-card fade-in-bounce delay-4">
+      <h2>Ce que je vise</h2>
+      <p>Je suis encore jeune et je veux explorer toutes les facettes du monde du code : freelancing, agences, et pourquoi pas un jour, la création de ma propre entreprise. Mon objectif est clair : travailler avec des personnes qui ont une vraie vision, qui croient en leur projet, et pouvoir les accompagner grâce au web. <br> Je suis aussi porté par une motivation plus grande : voir que l’Afrique commence à embrasser les métiers de la tech me pousse à vouloir faire partie de ceux qui valoriseront cette voie pour les générations futures.</p>
+    </section>
+
+    <section class="section-card fade-in-bounce delay-5">
+      <h2>Un moment marquant</h2>
+      <p>Un souvenir qui restera gravé : la présentation du site à l’équipe de Disick Man. Lorsqu’ils ont découvert les effets visuels, le design et l’ambiance générale du site, leurs réactions positives m’ont énormément encouragé. Ce fut un vrai moment de validation et de fierté pour moi.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 Tiamiyou Arèmou — Tous droits réservés</p>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script><script>
+    function isMobile() {
+      return window.innerWidth <= 768;
+    }
+  
+    function isSectionVerticallyCentered(el) {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const elementCenter = rect.top + rect.height / 2;
+      const screenCenter = windowHeight / 2;
+      const tolerance = rect.height / 3;
+  
+      return Math.abs(elementCenter - screenCenter) <= tolerance;
+    }
+  
+    function handleScrollMobile() {
+      if (!isMobile()) return;
+  
+      document.querySelectorAll('.section-card').forEach(section => {
+        if (isSectionVerticallyCentered(section)) {
+          section.classList.add('active-scroll');
+        } else {
+          section.classList.remove('active-scroll');
+        }
+      });
+    }
+  
+    if (isMobile()) {
+      window.addEventListener('scroll', handleScrollMobile);
+      window.addEventListener('resize', handleScrollMobile);
+      window.addEventListener('load', handleScrollMobile);
+    }
+  </script>
+  </body>
+</html>

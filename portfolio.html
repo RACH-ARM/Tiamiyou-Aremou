@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Tiamiyou Arèmou</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Menu Hamburger visible partout -->
+  <div class="hamburger" onclick="toggleSidebar()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <h2 class="logo">Tiamiyou</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+
+<section id="projects">
+  <h2>Mes Projets</h2>
+  <div class="project-grid">
+    <!-- Projet 1 -->
+    <div class="project-card fade-in-up">
+      <div class="project-image">
+        <img src="images/Abstract landing page _ Free Vector.jpeg" alt="Projet 1">
+        <div class="overlay">
+          <a href="#" class="btn">Voir le projet</a>
+        </div>
+      </div>
+      <h3>Projet 1</h3>
+      <p>Un site vitrine stylé pour un salon de coiffure.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JS</span>
+      </div>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-card fade-in-up delay-1">
+      <div class="project-image">
+        <img src="images/Conception de fond abstrait dégradé _ Vecteur Gratuite.jpeg" alt="Projet 2">
+        <div class="overlay">
+          <a href="#" class="btn">Voir le projet</a>
+        </div>
+      </div>
+      <h3>Projet 2</h3>
+      <p>Mini boutique en ligne avec panier dynamique.</p>
+      <div class="tags">
+        <span>React</span>
+        <span>JS</span>
+      </div>
+    </div>
+
+    <!-- Projet 3 -->
+    <div class="project-card fade-in-up delay-2">
+      <div class="project-image">
+        <img src="images/Page de destination de démarrage _ Vecteur Gratuite.jpeg" alt="Projet 3">
+        <div class="overlay">
+          <a href="#" class="btn">Voir le projet</a>
+        </div>
+      </div>
+      <h3>Projet 3</h3>
+      <p>Page de présentation pour une ONG locale.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="skills">
+  <h2>Compétences clés</h2>
+  <div class="skills-grid">
+    <div class="skill-card" data-percent="90">
+      <i class="fab fa-html5"></i>
+      <p>HTML5</p>
+      <div class="progress">
+        <div class="progress-bar"></div>
+        <span class="progress-text">0%</span>
+      </div>
+    </div>
+    <div class="skill-card" data-percent="85">
+      <i class="fab fa-css3-alt"></i>
+      <p>CSS3</p>
+      <div class="progress">
+        <div class="progress-bar"></div>
+        <span class="progress-text">0%</span>
+      </div>
+    </div>
+    <div class="skill-card" data-percent="75">
+      <i class="fab fa-js-square"></i>
+      <p>JavaScript</p>
+      <div class="progress">
+        <div class="progress-bar"></div>
+        <span class="progress-text">0%</span>
+      </div>
+    </div>
+    <div class="skill-card" data-percent="65">
+      <i class="fab fa-react"></i>
+      <p>React</p>
+      <div class="progress">
+        <div class="progress-bar"></div>
+        <span class="progress-text">0%</span>
+      </div>
+    </div>
+    <div class="skill-card" data-percent="80">
+      <i class="fab fa-git-alt"></i>
+      <p>Git</p>
+      <div class="progress">
+        <div class="progress-bar"></div>
+        <span class="progress-text">0%</span>
+      </div>
+    </div>
+    <div class="skill-card" data-percent="70">
+      <i class="fab fa-github"></i>
+      <p>GitHub</p>
+      <div class="progress">
+        <div class="progress-bar"></div>
+        <span class="progress-text">0%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+    
+    
+    <section id="contact">
+      <h2>Me contacter</h2>
+      <p>Tu veux qu’on bosse ensemble ?</p>
+      <div class="contact-links">
+        <a href="mailto:tonmail@mail.com">Email</a>
+        <a href="https://wa.me/tonnumero">WhatsApp</a>
+      </div>
+    </section>
+  </main>
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 Tiamiyou Arèmou — Tous droits réservés</p>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
