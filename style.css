@@ -1,0 +1,149 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f5f5f5, #ffe6f2);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #9a1a6d, #e84a8a);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fade-down 1s ease;
+}
+
+header .photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: bounce-in 1.5s ease;
+}
+
+/* SECTIONS */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TITRES */
+h3 {
+  color: #9a1a6d;
+  border-bottom: 2px solid #e84a8a;
+  padding-bottom: 5px;
+  position: relative;
+  animation: fade-in 1.2s ease;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #e84a8a;
+  border-radius: 2px;
+  animation: grow 1.5s ease forwards;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #e84a8a;
+  color: white;
+  margin-top: 30px;
+  animation: fade-up 1s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-down {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.1); opacity: 1; }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes grow {
+  from { width: 0; }
+  to { width: 50px; }
+}
+
+/* UTILITAIRES */
+.fade-in {
+  animation: fade-in 1s ease forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 0.5s;
+}
+
+.slide-up {
+  animation: fade-in 1s ease forwards;
+}
+
+/* Liens de la section contact */
+#contact a {
+  color: #9a1a6d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#contact a:hover {
+  color: #e84a8a;
+  text-shadow: 0 0 8px #e84a8a, 0 0 15px #ff99cc;
+  transform: scale(1.1);
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Définition de l’animation shake */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
