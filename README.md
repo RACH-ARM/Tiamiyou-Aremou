@@ -16,7 +16,7 @@ Fonctionnalités
 - Photo de profil animée
 - Sections avec animations modernes
 
-![Aperçu](images/cv-site-view.png)
+![Aperçu](images/cv%20site%20view.png)
 
 
 ## 📂 Structure du projet
@@ -30,4 +30,4 @@ Fonctionnalités
 └── README.md        # Documentation
 
 ## 🚀 Démo
-👉 Bientôt disponible avec GitHub Pages
+👉 [text](https://rach-arm.github.io/Tiamiyou-Aremou/)
